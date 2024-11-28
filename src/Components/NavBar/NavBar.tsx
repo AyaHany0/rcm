@@ -24,16 +24,11 @@ const NavBar = () => {
   return (
     <AppBar
       position="fixed"
-      sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
+      sx={{ zIndex: (theme) => theme.zIndex.drawer + 1, paddingX: 0 }}
     >
       <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
         <Box sx={{ display: "flex", alignItems: "center" }}>
-          <IconButton
-            color="inherit"
-            edge="start"
-            sx={{ mr: 2 }}
-            onClick={toggleSidebar}
-          >
+          <IconButton color="inherit" edge="start" onClick={toggleSidebar}>
             <MenuIcon />
           </IconButton>
           <Typography
@@ -41,7 +36,7 @@ const NavBar = () => {
             component={Link}
             to={"/"}
             sx={{
-              marginRight: 2,
+              marginX: 3,
               textDecoration: "none",
               color: "inherit",
             }}
